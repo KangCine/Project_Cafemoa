@@ -44,7 +44,7 @@ input {
 		</div>
 		<div class="password">
 			<label for="password">비밀번호</label>
-			<input type="password" id="password" name="password"> 
+			<input type="password" id="current_password" name="current_password"> 
 		</div>
 		<button class="login" type="submit">Log in</button>
 	</form>
