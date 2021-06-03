@@ -16,7 +16,7 @@ public class CafeActionFactory {
 		Action action = null;
 		
 		if(cmd.equals("/login.do")) {
-			action = new CafeLoginAction("");
+			action = new CafeLoginAction("/index.jsp");
 		}else if(cmd.equals("/logout.do")) {
 			action = new CafeLogoutAction("");
 		}else if(cmd.equals("/modify.do")) {

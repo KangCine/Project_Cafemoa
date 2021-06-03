@@ -1,0 +1,15 @@
+create table cafeTBL(
+	userid varchar2(15),
+	password varchar2(20) not null,
+	name varchar(20) not null,
+	addr varchar(200) not null,
+	phone varchar(50) not null,
+	gender varchar(10) not null,
+	email varchar(50) not null,
+	constraint cafeTBL_pk primary key(userid)
+);
+
+insert into cafeTBL(userid,password,name,addr,phone,gender,email)
+values('yuri21','010203','조유리','경기 남양주시','010-1234-1234','여','izoneyuri@naver.com');
+
+select * from cafeTBL;
