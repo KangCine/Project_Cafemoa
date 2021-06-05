@@ -18,6 +18,8 @@ public class CafeLeaveAction implements Action {
 		String userid = request.getParameter("userid");
 		String currentPassword = request.getParameter("current_Password");
 		
+		System.out.println(currentPassword);
+		
 		CafeLeaveService service = new CafeLeaveService();
 		boolean removeFlag = service.leave(userid, currentPassword);
 		

@@ -16,7 +16,7 @@ public class CafeLoginAction implements Action {
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		
 		String userid = request.getParameter("userid");
-		String currentPassword = request.getParameter("current_password");
+		String currentPassword = request.getParameter("current_Password");
 		
 		CafeLoginService service = new CafeLoginService();
 		CafeVO login = service.login(userid, currentPassword);

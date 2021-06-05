@@ -20,17 +20,25 @@ public class CafeDAO {
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		CafeVO vo = null;
+		
 		try {
-			String sql="select userid,name from cafeTBL where userid=? and password=?";
+			String sql="select userid,password,name,addr,phone,gender,email from cafeTBL "
+					 + "where userid=? and password=?";
 			pstmt = con.prepareStatement(sql);
 			pstmt.setString(1, userid);
 			pstmt.setString(2, currentPassword);
+			
 			rs = pstmt.executeQuery();
 			
-			if(rs.next()) {
+			while(rs.next()) {
 				vo = new CafeVO();
 				vo.setUserid(rs.getString("userid"));
+				vo.setPassword(rs.getString("password"));
 				vo.setName(rs.getString("name"));
+				vo.setAddr(rs.getString("addr"));
+				vo.setPhone(rs.getString("phone"));
+				vo.setGender(rs.getString("gender"));
+				vo.setEmail(rs.getString("email"));
 			}
 			
 		} catch (Exception e) {
