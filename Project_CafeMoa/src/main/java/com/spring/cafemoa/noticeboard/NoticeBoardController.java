@@ -47,7 +47,7 @@ public class NoticeBoardController {
 		
 		model.addAttribute("noticeBoardVO", noticeBoardService.noticeBoardSelectOne(notice_board_seq));
 		
-		return "noticeboardboardupdate";
+		return "noticeboardupdate";
 	}
 	
 	@RequestMapping("/noticeboardupdateres.do")
@@ -63,7 +63,7 @@ public class NoticeBoardController {
 	public String noticeBoardDelete(int getNotice_board_seq) {
 		
 		if(noticeBoardService.noticeBoardDelete(getNotice_board_seq) > 0){
-			return "redirect:list.do";
+			return "redirect:noticeboardlist.do";
 		}
 		return "redirect:noticeboardselectone.do?notice_board_seq="+getNotice_board_seq;
 	}

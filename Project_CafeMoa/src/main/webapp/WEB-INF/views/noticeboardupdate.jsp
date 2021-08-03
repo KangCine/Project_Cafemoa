@@ -10,12 +10,12 @@
 
 	<h1>UPDATE</h1>
 
-	<form action="updateres.do" method="post">
-	<input type="hidden" name="myno" value="${noticeBoardVO.notice_board_seq }" />
+	<form action="noticeboardupdateres.do" method="post">
+	<input type="hidden" name="notice_board_seq" value="${noticeBoardVO.notice_board_seq }" />
 		<table border="1">
 			<tr>
 				<th>작성자</th>
-				<td>${noticeBoardVO.notice_board_memner_id }</td>
+				<td>${noticeBoardVO.notice_board_member_id }</td>
 			</tr>
 			<tr>
 				<th>제목</th>
@@ -28,7 +28,7 @@
 			<tr>
 				<td colspan="2" align="right">
 					<input type="submit" value="수정" />
-					<input type="button" value="취소" onclick="" />
+					<input type="button" value="취소" onclick="noticeboardselectone.do?notice_board_seq=${noticeboardvo.notice_board_seq}" />
 				</td>
 			</tr>
 		</table>

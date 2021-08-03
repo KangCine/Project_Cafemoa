@@ -17,7 +17,7 @@ public class NoticeBoardDaoImpl implements NoticeBoardDao {
 	public List<NoticeBoardVO> noticeBoardSelectList() {
 		List<NoticeBoardVO> list = new ArrayList<NoticeBoardVO>();
 		try {
-			list = sqlSession.selectList(NAMESPACE+"selectList");
+			list = sqlSession.selectList(NAMESPACE+"SelectList");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -29,7 +29,7 @@ public class NoticeBoardDaoImpl implements NoticeBoardDao {
 		NoticeBoardVO noticeBoardVO = null;
 		
 		try {
-			noticeBoardVO = sqlSession.selectOne(NAMESPACE+"selectOne", notice_board_seq);
+			noticeBoardVO = sqlSession.selectOne(NAMESPACE+"SelectOne", notice_board_seq);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -42,7 +42,7 @@ public class NoticeBoardDaoImpl implements NoticeBoardDao {
 		int res = 0;
 		
 		try {
-			res = sqlSession.insert(NAMESPACE + "insert", noticeBoardVO);
+			res = sqlSession.insert(NAMESPACE + "Insert", noticeBoardVO);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -55,7 +55,7 @@ public class NoticeBoardDaoImpl implements NoticeBoardDao {
 		int res = 0;
 		
 		try {
-			res = sqlSession.update(NAMESPACE + "update", noticeBoardVO);
+			res = sqlSession.update(NAMESPACE + "Update", noticeBoardVO);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -68,7 +68,7 @@ public class NoticeBoardDaoImpl implements NoticeBoardDao {
 		int res = 0;
 		
 		try {
-			res = sqlSession.delete(NAMESPACE + "delete", notice_board_seq);
+			res = sqlSession.delete(NAMESPACE + "Delete", notice_board_seq);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

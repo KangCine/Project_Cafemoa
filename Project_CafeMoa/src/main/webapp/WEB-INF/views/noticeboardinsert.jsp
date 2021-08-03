@@ -27,7 +27,7 @@
 			<tr>
 				<td colspan="2" align="right">
 					<input type="submit" value="글작성" />
-					<input type="button" value="취소" onclick="" />
+					<input type="button" value="취소" onclick="location.href='noticeselectlist.do'" />
 				</td>
 			</tr>
 		</table>

@@ -23,17 +23,17 @@
 			<th>작성일</th>
 		</tr>
 		<c:choose>
-			<c:when test="${empty list }">
+			<c:when test="${empty noticeboardlist }">
 				<tr>
 					<th colspan="4">----------작성된 글이 없습니다----------</th>
 				</tr>
 			</c:when>		
 			<c:otherwise>
-				<c:forEach items="${list }" var="noticeboardvo">
+				<c:forEach items="${noticeboardlist }" var="noticeboardvo">
 					<tr>
 						<td>${noticeboardvo.notice_board_seq }</td>
-						<td>${noticeboardvo.notice_board_name }</td>
-						<td><a href="detail.do?myno=${noticeboardvo.notice_board_seq }">${noticeboardvo.notice_board_title }</a></td>
+						<td>${noticeboardvo.notice_board_member_id }</td>
+						<td><a href="noticeboardselectone.do?notice_board_seq=${noticeboardvo.notice_board_seq }">${noticeboardvo.notice_board_title }</a></td>
 						<td>${noticeboardvo.notice_board_regdate }</td>
 					</tr>
 				</c:forEach>

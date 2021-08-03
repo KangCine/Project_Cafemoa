@@ -13,7 +13,7 @@
 	<table border="1">
 		<tr>
 			<th>작성자</th>
-			<td>${noticeBoardVO.notice_board_name }</td>
+			<td>${noticeBoardVO.notice_board_member_id }</td>
 		</tr>
 		<tr>
 			<th>제목</th>
@@ -25,9 +25,9 @@
 		</tr>
 		<tr>
 			<td colspan="2" align="right">
-				<input type="button" value="수정" onclick="location.href='noticeboardupdateform.do?notice_board_seq=${dto.notice_board_seq}'" />
-				<input type="button" value="삭제" onclick="location.href='noticeboardselectone.do?notice_board_seq=${dto.notice_board_seq}'" />
-				<input type="button" value="목록" onclick="location.href='list.do'" />
+				<input type="button" value="수정" onclick="location.href='noticeboardupdateform.do?notice_board_seq=${noticeBoardVO.notice_board_seq}'" />
+				<input type="button" value="삭제" onclick="location.href='noticeboarddelete.do?notice_board_seq=${noticeBoardVO.notice_board_seq}'" />
+				<input type="button" value="목록" onclick="location.href='noticeselectlist.do'" />
 			</td>
 		</tr>
 	</table>
