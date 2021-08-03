@@ -33,7 +33,7 @@
 					<tr>
 						<td>${noticeboardvo.notice_board_seq }</td>
 						<td>${noticeboardvo.notice_board_member_id }</td>
-						<td><a href="noticeboardselectone.do?notice_board_seq=${noticeboardvo.notice_board_seq }">${noticeboardvo.notice_board_title }</a></td>
+						<td><a href="noticeboardselectone.do?notice_board_seq=${noticeboardvo.notice_board_seq}">${noticeboardvo.notice_board_title }</a></td>
 						<td>${noticeboardvo.notice_board_regdate }</td>
 					</tr>
 				</c:forEach>

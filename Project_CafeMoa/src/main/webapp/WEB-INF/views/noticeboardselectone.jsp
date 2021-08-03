@@ -27,7 +27,7 @@
 			<td colspan="2" align="right">
 				<input type="button" value="수정" onclick="location.href='noticeboardupdateform.do?notice_board_seq=${noticeBoardVO.notice_board_seq}'" />
 				<input type="button" value="삭제" onclick="location.href='noticeboarddelete.do?notice_board_seq=${noticeBoardVO.notice_board_seq}'" />
-				<input type="button" value="목록" onclick="location.href='noticeselectlist.do'" />
+				<input type="button" value="목록" onclick="location.href='noticeboardlist.do'" />
 			</td>
 		</tr>
 	</table>

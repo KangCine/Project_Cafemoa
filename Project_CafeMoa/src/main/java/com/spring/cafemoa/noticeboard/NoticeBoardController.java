@@ -60,12 +60,12 @@ public class NoticeBoardController {
 	}
 	
 	@RequestMapping("/noticeboarddelete.do")
-	public String noticeBoardDelete(int getNotice_board_seq) {
+	public String noticeBoardDelete(int notice_board_seq) {
 		
-		if(noticeBoardService.noticeBoardDelete(getNotice_board_seq) > 0){
+		if(noticeBoardService.noticeBoardDelete(notice_board_seq) > 0){
 			return "redirect:noticeboardlist.do";
 		}
-		return "redirect:noticeboardselectone.do?notice_board_seq="+getNotice_board_seq;
+		return "redirect:noticeboardselectone.do?notice_board_seq="+notice_board_seq;
 	}
 
 }

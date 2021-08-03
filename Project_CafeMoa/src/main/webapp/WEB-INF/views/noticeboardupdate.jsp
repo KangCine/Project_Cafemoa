@@ -28,7 +28,7 @@
 			<tr>
 				<td colspan="2" align="right">
 					<input type="submit" value="수정" />
-					<input type="button" value="취소" onclick="noticeboardselectone.do?notice_board_seq=${noticeboardvo.notice_board_seq}" />
+					<input type="button" value="취소" onclick="location.href='noticeboardselectone.do?notice_board_seq=${noticeBoardVO.notice_board_seq}'" />
 				</td>
 			</tr>
 		</table>
