@@ -4,9 +4,12 @@ import java.util.List;
 
 public interface NoticeBoardDao {
 	
-	String NAMESPACE = "noticeboard.";
-	
-	public List<NoticeBoardVO> noticeBoardSelectList();
-	
+	String NAMESPACE = "noticeboard.noticeBoard";
 
+	public List<NoticeBoardVO> noticeBoardSelectList();
+	public NoticeBoardVO noticeBoardSelectOne(int notice_board_seq);
+	public int noticeBoardInsert(NoticeBoardVO noticeBoardVO);
+	public int noticeBoardUpdate(NoticeBoardVO noticeBoardVO);
+	public int noticeBoardDelete(int notice_board_seq);
+	
 }

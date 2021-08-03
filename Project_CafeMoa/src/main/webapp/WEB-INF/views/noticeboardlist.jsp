@@ -29,18 +29,18 @@
 				</tr>
 			</c:when>		
 			<c:otherwise>
-				<c:forEach items="${list }" var="vo">
+				<c:forEach items="${list }" var="noticeboardvo">
 					<tr>
-						<td>${vo.notice_board_seq }</td>
-						<td>${vo.notice_board_name }</td>
-						<td><a href="detail.do?myno=${vo }.myno }">${vo.notice_board_title }</a></td>
-						<td>${vo.notice_board_regdate }</td>
+						<td>${noticeboardvo.notice_board_seq }</td>
+						<td>${noticeboardvo.notice_board_name }</td>
+						<td><a href="detail.do?myno=${noticeboardvo.notice_board_seq }">${noticeboardvo.notice_board_title }</a></td>
+						<td>${noticeboardvo.notice_board_regdate }</td>
 					</tr>
 				</c:forEach>
 			</c:otherwise>
 		</c:choose>
 		<tr>
-			<td colspan="4" align="right"><input type="button" value="글작성" onclick=""></td>
+			<td colspan="4" align="right"><input type="button" value="글작성" onclick="location.href='noticeboardinsertform.do'"></td>
 		</tr>
 	</table>
 </body>

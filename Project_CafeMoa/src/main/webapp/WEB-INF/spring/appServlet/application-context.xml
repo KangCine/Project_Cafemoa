@@ -33,10 +33,9 @@
 	<bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
 		<constructor-arg ref="sqlSession" />
 	</bean>
-	
-	<!-- transaction manager -->
-	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-		<property name="dataSource" ref="dataSource" />
-	</bean>
 		
 </beans>
+<!-- 
+원래는 spring폴더 아래 root-context라는 이름으로 있었지만 xml폴더를 한곳으로 몰기 위해 appServlet으로 이동시킴
+이름을 root-context에서 application-context로 이름 바꿈 -> web.xml에서도 이름 바꿔야함
+ -->

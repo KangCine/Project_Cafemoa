@@ -3,7 +3,7 @@
 <configuration>
 
 	<typeAliases>
-		<typeAlias type="com.spring.cafemoa.noticeboard.NoticeBoardVO" alias="NoticeBoardVO"/>
+		<typeAlias type="com.spring.cafemoa.noticeboard.NoticeBoardVO" alias="noticeBoardVO"/>
 	</typeAliases>
 
 	<!-- resource : src/main/resources 와 같음 -->

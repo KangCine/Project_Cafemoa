@@ -14,9 +14,9 @@ import lombok.Setter;
 public class NoticeBoardVO {
 	
 	private int notice_board_seq;
-	private String notice_borad_member_id;
-	private String notice_borad_title;
-	private String notice_borad_content;
-	private Date notice_borad_regdate;
-	
+	private String notice_board_member_id;
+	private String notice_board_title;
+	private String notice_board_content;
+	private Date notice_board_regdate;
+
 }

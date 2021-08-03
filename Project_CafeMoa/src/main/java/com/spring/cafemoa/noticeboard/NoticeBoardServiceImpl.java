@@ -16,4 +16,24 @@ public class NoticeBoardServiceImpl implements NoticeBoardService {
 		return noticeBoardDao.noticeBoardSelectList();
 	}
 
+	@Override
+	public NoticeBoardVO noticeBoardSelectOne(int notice_board_seq) {
+		return noticeBoardDao.noticeBoardSelectOne(notice_board_seq);
+	}
+
+	@Override
+	public int noticeBoardInsert(NoticeBoardVO noticeBoardVO) {
+		return noticeBoardDao.noticeBoardInsert(noticeBoardVO);
+	}
+
+	@Override
+	public int noticeBoardUpdate(NoticeBoardVO noticeBoardVO) {
+		return noticeBoardDao.noticeBoardUpdate(noticeBoardVO);
+	}
+
+	@Override
+	public int noticeBoardDelete(int notice_board_seq) {
+		return noticeBoardDao.noticeBoardDelete(notice_board_seq);
+	}
+
 }
