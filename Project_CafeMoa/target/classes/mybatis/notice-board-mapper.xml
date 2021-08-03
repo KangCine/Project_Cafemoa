@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="noticeboard">
+
+	<resultMap type="NoticeBoardVo" id="noticeBoardMap">
+		<result property="notice_board_seq" column="NOTICE_BOARD_SEQ" />
+		<result property="notice_board_member_id" column="NOTICE_BOARD_MEMBER_ID" />
+		<result property="notice_board_title" column="NOTICE_BOARD_TITLE" />
+		<result property="notice_board_content" column="NOTICE_BOARD_CONTENT" />
+		<result property="notice_board_regdate" column="NOTICE_BOARD_REGDATE" />
+	</resultMap>
+	
+
+	<select id="noticeBoardSelectList" resultType="NoticeBoardVo">
+		SELECT NOTICE_BOARD_SEQ, NOTICE_BOARD_MEMEBR_ID, NOTICE_BOARD_TITLE, NOTICE_BOARD_CONTENT, NOTICE_BOARD_REGDATE
+		FROM NOTICEBOARD
+		ORDER BY NOTICEBOARD DESC
+	</select>
+
+</mapper>
